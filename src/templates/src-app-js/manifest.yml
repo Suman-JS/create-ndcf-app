@@ -1,0 +1,7 @@
+applications:
+    - name: template-project-name
+      instances: 1
+      memory: 512M
+      docker:
+        image: containerUsename/template-project-name:latest
+        username: containerUsename

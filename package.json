@@ -1,0 +1,57 @@
+{
+  "name": "create-ndcf-app",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/main.js",
+  "bin": {
+    "create-ndcf-app": "./src/main.js",
+    "ndcf-app": "./src/main.js"
+  },
+  "files": [
+    "src",
+    "src/templates"
+  ],
+  "scripts": {
+    "start": "node ./src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Suman-JS/create-ndcf-app.git"
+  },
+  "keywords": [
+    "ndcf",
+    "next",
+    "sap",
+    "btp",
+    "cloud",
+    "foundry",
+    "docker",
+    "tailwind",
+    "ui",
+    "shadcn",
+    "cf",
+    "app-router",
+    "pages-router",
+    "cloud-foundry",
+    "shadcn/ui"
+  ],
+  "license": "MIT",
+  "description": "A CLI tool to create a Next.js 14 boilerplate app with Docker configuration, ready to be pushed to SAP BTP Cloud Foundry.",
+  "bugs": {
+    "url": "https://github.com/Suman-JS/create-ndcf-app/issues",
+    "homepage": "https://github.com/Suman-JS/create-ndcf-app#readme"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "figlet": "^1.7.0",
+    "fs-extra": "^11.1.1",
+    "gradient-string": "^2.0.2",
+    "inquirer": "^9.2.23",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
