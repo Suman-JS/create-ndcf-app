@@ -1,4 +1,4 @@
-To contribute to this project, follow these steps:
+# To contribute to this project, follow these steps:
 
 1. Fork the repository
 2. Clone the forked repository
