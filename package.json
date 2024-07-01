@@ -2,17 +2,29 @@
   "name": "create-ndcf-app",
   "version": "0.1.0",
   "type": "module",
-  "main": "./src/main.js",
+  "main": "dist/index.js",
   "bin": {
-    "create-ndcf-app": "./src/main.js",
-    "ndcf-app": "./src/main.js"
+    "ndcf-app": "dist/index.js",
+    "create-ndcf-app": "dist/index.js"
   },
   "files": [
-    "src",
-    "src/templates"
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE",
+    ".yarnrc.yml",
+    "package.json"
   ],
   "scripts": {
-    "start": "node ./src/main.js"
+    "dev": "vitest",
+    "lint": "tsc",
+    "test": "vitest run",
+    "build": "tsup src/index.ts --format esm --clean",
+    "start": "node dist/index.js",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run ci && changeset publish",
+    "link": "(pnpm unlink --global || true) && pnpm link --global",
+    "clean": "rm -rf dist node_modules && pnpm unlink --global"
   },
   "repository": {
     "type": "git",
@@ -44,14 +56,22 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
+    "eslint": "^9.6.0",
     "figlet": "^1.7.0",
     "fs-extra": "^11.1.1",
     "gradient-string": "^2.0.2",
     "inquirer": "^9.2.23",
     "ora": "^8.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.14.9",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2",
+    "vitest": "^1.6.0"
+  },
   "engines": {
-    "node": ">=18"
+    "node": ">=16.0.0"
   }
 }

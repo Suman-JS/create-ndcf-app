@@ -1,9 +1,4 @@
 node_modules
-.git
-.gitignore
-.npmignore
 .DS_Store
-npm-debug.log
-.workflows
-.github
-.github/*
+.git
+esbuild.mjs
